@@ -11,25 +11,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>전체 회원 조회</title>
   <!-- plugins:css -->
-  <link rel="stylesheet" href="../../vendors/iconfonts/mdi/css/materialdesignicons.min.css">
-  <link rel="stylesheet" href="../../vendors/css/vendor.bundle.base.css">
+  <link rel="stylesheet" href="${ pageContext.request.contextPath }/vendors/iconfonts/mdi/css/materialdesignicons.min.css">
+  <link rel="stylesheet" href="${ pageContext.request.contextPath }/vendors/css/vendor.bundle.base.css">
   <!-- endinject -->
   <!-- plugin css for this page -->
-  <link rel="stylesheet" href="../../node_modules/jqvmap/dist/jqvmap.min.css" />
+  <link rel="stylesheet" href="${ pageContext.request.contextPath }/node_modules/jqvmap/dist/jqvmap.min.css" />
   <!-- End plugin css for this page -->
   <!-- inject:css -->
-  <link rel="stylesheet" href="../../css/style.css">
+  <link rel="stylesheet" href="${ pageContext.request.contextPath }/css/style.css">
   <!-- endinject -->
-  <link rel="shortcut icon" href="../../images/favicon.png" />
+  <link rel="shortcut icon" href="${ pageContext.request.contextPath }/images/favicon.png" />
 </head>
 
 <body>
   <div class="container-scroller">
-    <!-- partial:../../partials/_navbar.html -->
+    <!-- partial:${ pageContext.request.contextPath }/partials/_navbar.html -->
    	<%@ include file="/jsp/include/navbar.jsp" %>
     <!-- partial -->
     <div class="container-fluid page-body-wrapper">
-      <!-- partial:../../partials/_sidebar.html -->
+      <!-- partial:${ pageContext.request.contextPath }/partials/_sidebar.html -->
       <%@ include file="/jsp/include/sidebar.jsp" %>
       <!-- partial -->
       <div class="main-panel">
@@ -70,7 +70,7 @@
                     	<c:forEach items="${ list }" var="member" varStatus="status">
                     		<tr>
 	                    		<td class="py-1">
-		                          <img src="../../images/faces-clipart/pic-${ status.index % 4 + 1 }.png" alt="image"/>
+		                          <img src="${ pageContext.request.contextPath }/images/faces-clipart/pic-${ status.index % 4 + 1 }.png" alt="image"/>
 		                        </td>
 								<td>${ member.id }</td>
 								<td><a href="detail.jsp?id=${ member.id }"><c:out value="${ member.name }" /></a></td>
@@ -87,7 +87,7 @@
           </div>
         </div>
         <!-- content-wrapper ends -->
-        <!-- partial:../../partials/_footer.html -->
+        <!-- partial:${ pageContext.request.contextPath }/partials/_footer.html -->
         <footer class="footer">
           <div class="d-sm-flex justify-content-center justify-content-sm-between">
             <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2017 <a href="https://www.bootstrapdash.com/" target="_blank">Bootstrap Dash</a>. All rights reserved.</span>
@@ -102,14 +102,14 @@
   </div>
   <!-- container-scroller -->
   <!-- plugins:js -->
-  <script src="../../vendors/js/vendor.bundle.base.js"></script>
-  <script src="../../vendors/js/vendor.bundle.addons.js"></script>
+  <script src="${ pageContext.request.contextPath }/vendors/js/vendor.bundle.base.js"></script>
+  <script src="${ pageContext.request.contextPath }/vendors/js/vendor.bundle.addons.js"></script>
   <!-- endinject -->
   <!-- Plugin js for this page-->
   <!-- End plugin js for this page-->
   <!-- inject:js -->
-  <script src="../../js/off-canvas.js"></script>
-  <script src="../../js/misc.js"></script>
+  <script src="${ pageContext.request.contextPath }/js/off-canvas.js"></script>
+  <script src="${ pageContext.request.contextPath }/js/misc.js"></script>
   <!-- endinject -->
   <!-- Custom js for this page-->
   <!-- End custom js for this page-->
